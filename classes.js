@@ -222,9 +222,11 @@ class Machine{
       this.needs_reboot = true
     }
 
-    reboot = () =>{
-      this.wear_and_tear_count -= 10
-      this.needs_reboot = false
+    this.reboot = () =>{
+      return this.function = ()=> {
+        this.wear_and_tear_count -= 10
+        this.needs_reboot = false
+      }
     }
   }
 }
